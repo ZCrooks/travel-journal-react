@@ -8,8 +8,20 @@ function App() {
   return (
     <div className="App">
       <Header />
-
-      {/* <Footer /> */}
+      <main>
+        {Data.map((attraction) => {
+          return <Content 
+          image={attraction.imageUrl}
+          location={attraction.location}
+          url={attraction.googleMapsUrl}
+          title={attraction.title}
+          startDate={attraction.startDate}
+          endDate={attraction.endDate}
+          description={attraction.description}
+          />
+        })}
+      </main>
+      <Footer />
 
     </div>
   );
